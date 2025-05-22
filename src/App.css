@@ -1,0 +1,80 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.game-container {
+  width: 60vw;
+  height: 60vh;
+  display: grid;
+  grid-template-areas:
+    "1a 1b 1c"
+    "2a 2b 2c"
+    "3a 3b 3c";
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  background-color: cornflowerblue;
+  padding: .5rem;
+}
+
+.active-user {
+  background-color: lightgreen;
+}
+
+.user-selection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.game-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-actions > button {
+  margin: 0 .5rem;
+  padding: .5rem 1rem;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.game-actions > button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* Center .cell content horizontally and vertically */ 
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: aqua;
+  color: black;
+  padding: .5rem;
+  cursor: pointer;
+  
+  aspect-ratio: 1 / 1;
+  font-size: 10rem;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.game-winner-container {
+  height: 30px;
+}
